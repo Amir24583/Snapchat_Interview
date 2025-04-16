@@ -27,6 +27,22 @@
 let shows = [];
 
 let isSortedAZ = false;
+
+let currentTypeFilter = "all";
+
+const TYPE_ALIASES = {
+  "tv": "TV Show",
+  "show": "TV Show",
+  "tv show": "TV Show",
+  "movie": "Movie",
+  "movies": "Movie",
+  "Tv": "TV Show",
+  "Show": "TV Show",
+  "Tv Show": "TV Show",
+  "Movie": "Movie",
+  "Movies": "Movie"
+};
+
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
@@ -34,7 +50,15 @@ function loadData() {
   fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
-      shows = data;
+      const saved = localStorage.getItem("shows");
+      shows = saved ? JSON.parse(saved) : data.map(show => ({...show,
+        genre: show.genre.trim(),
+        type: show.type.trim()
+      }));
+
+      if (!saved) {
+        localStorage.setItem("shows", JSON.stringify(shows));
+      }
       showCards();
     })
     .catch((error) => {
@@ -70,8 +94,9 @@ function editCardContent(card, title, image, genre, year, description) {
   cardHeader.textContent = title;
 
   const cardImage = card.querySelector("img");
-  cardImage.src = image;
-  cardImage.alt = '${title} Poster';
+  cardImage.src = image || "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
+  cardImage.alt = `${title} Poster`;
+
 
   const ul = card.querySelector("ul");
   ul.innerHTML = `<li><strong>Genre:</strong> ${genre}</li>
@@ -106,27 +131,35 @@ function sortAZ() {
   showCards(sortedShows);
 }
 
-function filterByGenre() {
-  const selectedGenre = document.getElementById("genre-filter").value;
+function applyFilters() {
+  const selectedGenre = document.getElementById("genre-filter").value.toLowerCase();
+  const selectedType = currentTypeFilter.toLowerCase();
 
-  if (selectedGenre === "all") {
-    showCards(); 
-  } else {
-    const filtered = shows.filter(show => show.genre === selectedGenre);
-    showCards(filtered);
-  }
+  const filtered = shows.filter(show => {
+    const genreMatch =
+      selectedGenre === "all" ||
+      show.genre.toLowerCase() === selectedGenre;
+
+    const typeMatch =
+      selectedType === "all" ||
+      show.type.toLowerCase() ===  selectedType;
+
+    return genreMatch && typeMatch;
+  });
+
+  showCards(filtered);
 }
 
 function filterByType(type) {
-  if (type === "all") {
-    showCards();
-  } else {
-    const filtered = shows.filter(show => show.type === type);
-    showCards(filtered);
-  }
+  const lower = type.trim().toLowerCase();
+  currentTypeFilter = TYPE_ALIASES[lower] || "all";  
+  applyFilters();
 }
 
 
+function filterByGenre() {
+  applyFilters();
+}
 
 function addNewShow() {
   const title = document.getElementById("new-title").value;
@@ -134,14 +167,26 @@ function addNewShow() {
   const genre = document.getElementById("new-genre").value;
   const year = parseInt(document.getElementById("new-year").value);
   const description = document.getElementById("new-description").value;
-  const type = document.getElementById("new-type").value;
+  const rawType = document.getElementById("new-type").value.trim().toLowerCase();
+  const type = TYPE_ALIASES[rawType];
 
-  if (!title || !image || !genre || isNaN(year) || !description) {
+  if (!title || !image || !genre || isNaN(year) || !description || !type) {
     alert("Please fill out all fields correctly.");
     return;
   }
 
-  shows.push({title, image, genre, year, description, type});
+  const newShow = {
+    title,
+    image,
+    genre,
+    year,
+    description,
+    type,
+  };
+
+  shows.push(newShow);
+  localStorage.setItem("shows", JSON.stringify(shows));
+  showCards();
 
 
   document.getElementById("new-title").value = "";
@@ -149,9 +194,13 @@ function addNewShow() {
   document.getElementById("new-genre").value = "";
   document.getElementById("new-year").value = "";
   document.getElementById("new-description").value = "";
-  document.getElementById("TV or Show?").value = "";
+  document.getElementById("new-type").value = "";
 
-  showCards();
+}
+
+function resetShows() {
+  localStorage.removeItem("shows");
+  loadData();
 }
 
 
@@ -168,6 +217,6 @@ function quoteAlert() {
 }
 
 function removeLastCard() {
-  data.pop(); 
+  shows.pop(); 
   showCards(); // Call showCards again to refresh
 }

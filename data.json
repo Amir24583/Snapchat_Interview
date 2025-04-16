@@ -25,7 +25,7 @@
   },
   {
     "title": "Insecure",
-    "image": "",
+    "image": "https://image.tmdb.org/t/p/original/sGMwPIE6m9QI3LzCRXnZG8opZtB.jpg​",
     "genre": "Comedy",
     "year": 2016,
     "description": "Follows the awkward experiences and racy tribulations of a modern-day African-American woman.",
@@ -33,7 +33,7 @@
   },
   {
     "title": "Snowfall",
-    "image": "",
+    "image": "https://image.tmdb.org/t/p/original/y7ntzl7msiaS6o7dvDbNG7XFYcR.jpg",
     "genre": "Drama",
     "year": 2017,
     "description": "A look at the early days of the crack cocaine epidemic in Los Angeles during the early 1980s.",
@@ -41,7 +41,7 @@
   },
   {
     "title": "You People",
-    "image": "",
+    "image": "https://image.tmdb.org/t/p/original/yBizkvsCJUgm43t2wcjr1urFqDA.jpg",
     "genre": "Comedy",
     "year": 2023,
     "description": "A new couple and their families reckon with modern love amid culture clashes, societal expectations, and generational differences.",
@@ -57,7 +57,7 @@
   },
   {
     "title": "Friday",
-    "image": "",
+    "image": "https://image.tmdb.org/t/p/original/2lReF53F8trkC68piGSfk0JVwWU.jpg",
     "genre": "Comedy",
     "year": 1995,
     "description": "Two friends must come up with $200 they owe a local bully or there won't be a Saturday.",
@@ -73,7 +73,7 @@
   },
   {
     "title": "The Lincoln Lawyer",
-    "image": "https://upload.wikimedia.org/wikipedia/en/6/6b/The_Lincoln_Lawyer_%28TV_series%29.png",
+    "image": "https://image.tmdb.org/t/p/original/4jSaIqEU8CPBBNn4iVCK6wzPjSx.jpg",
     "genre": "Drama",
     "year": 2022,
     "description": "An iconoclastic idealist runs his law practice out of the back seat of his Lincoln Town Car.",
@@ -81,7 +81,7 @@
   },
   {
     "title": "Entourage",
-    "image": "https://upload.wikimedia.org/wikipedia/en/6/66/Entourage_Season_3.jpg",
+    "image": "",
     "genre": "Comedy",
     "year": 2004,
     "description": "Film star Vince Chase navigates the vapid terrain of Los Angeles with a close circle of friends and his trusty agent.",
@@ -89,7 +89,7 @@
   },
   {
     "title": "Pulp Fiction",
-    "image": "https://upload.wikimedia.org/wikipedia/en/8/82/Pulp_Fiction_cover.jpg",
+    "image": "",
     "genre": "Crime",
     "year": 1994,
     "description": "The lives of two mob hitmen, a boxer, and others intertwine in four tales of violence and redemption in LA.",
@@ -97,7 +97,7 @@
   },
   {
     "title": "The Shield",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/The_Shield_season_1_DVD.jpg",
+    "image": "https://image.tmdb.org/t/p/original/20evK4hFlyjYZjmOCCyRP6hmseu.jpg",
     "genre": "Crime",
     "year": 2002,
     "description": "Follows a corrupt anti-gang unit in the LAPD as they blur the line between right and wrong.",
@@ -105,7 +105,7 @@
   },
   {
     "title": "Collateral",
-    "image": "https://upload.wikimedia.org/wikipedia/en/0/00/Collateral_%282004%29_film_poster.jpg",
+    "image": "",
     "genre": "Thriller",
     "year": 2004,
     "description": "A cab driver finds himself hostage to a contract killer as he makes his rounds from hit to hit during one night in LA.",
@@ -113,7 +113,7 @@
   },
   {
     "title": "Straight Outta Compton",
-    "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/Straight_Outta_Compton_poster.jpg",
+    "image": "",
     "genre": "Biography",
     "year": 2015,
     "description": "The story of N.W.A, their rise to fame, and the cultural impact of their controversial music.",
@@ -121,7 +121,7 @@
   },
   {
     "title": "Lucifer",
-    "image": "https://upload.wikimedia.org/wikipedia/en/0/02/Lucifer_%28season_3%29.jpg",
+    "image": "",
     "genre": "Fantasy",
     "year": 2016,
     "description": "The Devil relocates to Los Angeles and opens a nightclub while becoming a consultant to the LAPD.",
@@ -129,7 +129,7 @@
   },
   {
     "title": "90210",
-    "image": "https://upload.wikimedia.org/wikipedia/en/7/7f/90210_Season_3_DVD.jpg",
+    "image": "",
     "genre": "Drama",
     "year": 2008,
     "description": "A group of teenagers from Beverly Hills navigate high school, relationships, and drama.",
@@ -137,7 +137,7 @@
   },
   {
     "title": "NCIS: Los Angeles",
-    "image": "https://upload.wikimedia.org/wikipedia/en/4/4e/NCIS_Los_Angeles_Season_1.jpg",
+    "image": "",
     "genre": "Crime",
     "year": 2009,
     "description": "An elite division of NCIS tracks and apprehends dangerous criminals that threaten national security.",
@@ -145,7 +145,7 @@
   },
   {
     "title": "Southland",
-    "image": "https://upload.wikimedia.org/wikipedia/en/2/24/Southland_season_1_DVD.jpg",
+    "image": "",
     "genre": "Drama",
     "year": 2009,
     "description": "A raw and authentic look at the lives of Los Angeles police officers on the streets of South Central.",
@@ -161,7 +161,7 @@
   },
   {
     "title": "Bosch",
-    "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/Bosch_title_card.png",
+    "image": "",
     "genre": "Crime",
     "year": 2014,
     "description": "An LAPD homicide detective works to solve crimes while facing challenges from his own past.",
@@ -169,7 +169,7 @@
   },
   {
     "title": "Barry",
-    "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/Barry_title_card.png",
+    "image": "",
     "genre": "Dark Comedy",
     "year": 2018,
     "description": "A hit man from the Midwest moves to Los Angeles and gets caught up in the city's theatre arts scene.",
@@ -177,7 +177,7 @@
   },
   {
     "title": "Once Upon a Time in Hollywood",
-    "image": "https://upload.wikimedia.org/wikipedia/en/8/86/Once_Upon_a_Time_in_Hollywood_poster.png",
+    "image": "",
     "genre": "Drama",
     "year": 2019,
     "description": "An actor and his stunt double navigate the changing film industry in 1969 Los Angeles.",
@@ -185,7 +185,7 @@
   },
   {
     "title": "The Rookie",
-    "image": "https://upload.wikimedia.org/wikipedia/en/8/81/The_Rookie_%28TV_series%29_logo.png",
+    "image": "",
     "genre": "Crime",
     "year": 2018,
     "description": "A middle-aged man joins the LAPD and navigates the challenges of starting over in a dangerous new career.",
@@ -193,7 +193,7 @@
   },
   {
     "title": "Californication",
-    "image": "https://upload.wikimedia.org/wikipedia/en/0/04/Californication_Logo.jpg",
+    "image": "",
     "genre": "Comedy",
     "year": 2007,
     "description": "A troubled writer struggles to balance fatherhood, career, and his love life in Los Angeles.",
@@ -201,7 +201,7 @@
   },
   {
     "title": "Hollywood",
-    "image": "https://upload.wikimedia.org/wikipedia/en/f/fc/Hollywood_Netflix.jpg",
+    "image": "",
     "genre": "Drama",
     "year": 2020,
     "description": "A group of aspiring actors and filmmakers in post-World War II Hollywood try to make it big.",
@@ -209,7 +209,7 @@
   },
   {
     "title": "The Bling Ring",
-    "image": "https://upload.wikimedia.org/wikipedia/en/4/44/The_Bling_Ring_Poster.jpg",
+    "image": "",
     "genre": "Crime",
     "year": 2013,
     "description": "A group of fame-obsessed teens use the internet to track celebrities' whereabouts and rob their homes.",
@@ -217,7 +217,7 @@
   },
   {
     "title": "Chinatown",
-    "image": "https://upload.wikimedia.org/wikipedia/en/3/32/Chinatownposter1.jpg",
+    "image": "",
     "genre": "Mystery",
     "year": 1974,
     "description": "A private detective uncovers a web of corruption in Los Angeles involving water rights and murder.",
@@ -225,7 +225,7 @@
   },
   {
     "title": "L.A. Confidential",
-    "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/L.A._Confidential_%28film%29.png",
+    "image": "",
     "genre": "Crime",
     "year": 1997,
     "description": "As corruption grows in 1950s Los Angeles, three policemen investigate a series of murders with their own brand of justice.",
@@ -233,7 +233,7 @@
   },
   {
     "title": "To Live and Die in L.A.",
-    "image": "https://upload.wikimedia.org/wikipedia/en/1/1a/Toliveanddieinla.jpg",
+    "image": "",
     "genre": "Action",
     "year": 1985,
     "description": "A secret service agent goes after a counterfeiter in the seedy parts of Los Angeles.",
@@ -241,7 +241,7 @@
   },
   {
     "title": "BoJack Horseman",
-    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/BoJack_Horseman_title_card.png/300px-BoJack_Horseman_title_card.png",
+    "image": "",
     "genre": "Animation",
     "year": 2014,
     "description": "A washed-up TV star horse tries to find meaning in his life with the help of his friends in Hollywood.",
@@ -249,7 +249,7 @@
   },
   {
     "title": "The L Word",
-    "image": "https://upload.wikimedia.org/wikipedia/en/5/5f/The_L_Word_title_card.png",
+    "image": "",
     "genre": "Drama",
     "year": 2004,
     "description": "Follows the lives of a group of lesbian friends in Los Angeles as they deal with love and careers.",
@@ -265,7 +265,7 @@
   },
   {
     "title": "The Nice Guys",
-    "image": "https://upload.wikimedia.org/wikipedia/en/6/63/The_Nice_Guys_poster.png",
+    "image": "",
     "genre": "Comedy",
     "year": 2016,
     "description": "In 1970s Los Angeles, a mismatched pair of private eyes investigate the disappearance of a teenage girl.",
@@ -273,7 +273,7 @@
   },
   {
     "title": "Swingers",
-    "image": "https://upload.wikimedia.org/wikipedia/en/d/d4/Swingersposter.jpg",
+    "image": "",
     "genre": "Comedy",
     "year": 1996,
     "description": "A group of friends struggle with life and love in Los Angeles while exploring the modern dating scene.",
@@ -281,7 +281,7 @@
   },
   {
     "title": "End of Watch",
-    "image": "https://upload.wikimedia.org/wikipedia/en/1/1f/End_of_Watch_Poster.jpg",
+    "image": "",
     "genre": "Crime",
     "year": 2012,
     "description": "Two LAPD officers find themselves targeted by a cartel after uncovering a stash house in South Central LA.",
@@ -289,7 +289,7 @@
   },
   {
     "title": "Venice Beach Chronicles",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Venice_Beach_boardwalk.jpg/640px-Venice_Beach_boardwalk.jpg",
+    "image": "",
     "genre": "Documentary",
     "year": 2020,
     "description": "A deep dive into the culture, people, and evolution of Venice Beach, Los Angeles.",
@@ -297,7 +297,7 @@
   },
   {
     "title": "Baywatch",
-    "image": "https://upload.wikimedia.org/wikipedia/en/4/4f/Baywatch_2017_film_poster.jpg",
+    "image": "",
     "genre": "Action",
     "year": 2017,
     "description": "Lifeguards uncover a criminal plot that threatens the future of the bay in this action-comedy based in LA.",
@@ -305,7 +305,7 @@
   },
   {
     "title": "Brooklyn Nine-Nine",
-    "image": "https://upload.wikimedia.org/wikipedia/en/4/4c/Brooklyn_Nine-Nine_season_5.jpg",
+    "image": "",
     "genre": "Comedy",
     "year": 2013,
     "description": "Although set in New York, the show was largely filmed on sets and stages in Los Angeles.",
