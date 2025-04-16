@@ -239,6 +239,11 @@ button:hover {
   border-left: 6px solid #e66bff;  
 }
 
+.dark-comedy {
+  border-left: 6px solid #aaa;
+}
+
+
 /* Fade-in and slide-up animation */
 @keyframes fadeSlideUp {
   0% {

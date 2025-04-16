@@ -87,7 +87,8 @@ function showCards(data = shows) {
 
 function editCardContent(card, title, image, genre, year, description) {
   card.style.display = "block";
-  card.classList.add(genre.toLowerCase()); 
+  const genreClass = genre.toLowerCase().replace(/\s+/g, "-");
+  card.classList.add(genreClass);
 
 
   const cardHeader = card.querySelector("h2");
