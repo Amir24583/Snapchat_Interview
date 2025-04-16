@@ -2,45 +2,139 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8ff;
 }
 
 .main-header {
-  background-color: rgba(0, 0, 0, 0.3);
-  padding-bottom: 10px;
+  background-color: #0077b6;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .title {
   text-align: center;
   margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
-  font-weight: normal;
+  font-size: 5em;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+#genre-filter {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0077b6;
+  transition: 0.3s;
+}
+
+#genre-filter:focus {
+  outline: none;
+  border-color: #023e8a;
+  box-shadow: 0 0 8px #90e0ef;
+}
+
+#search-input {
+  display: block;
+  margin: 30px auto 20px;
+  padding: 12px;
+  width: 350px;
+  font-size: 18px;
+  border: 2px solid #0077b6;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-input:focus {
+  border-color: #023e8a;
+  box-shadow: 0 0 8px #90e0ef;
+}
+
+#add-show-form {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #caf0f8;
+  border-top: 2px solid #90e0ef;
+}
+
+#add-show-form h2 {
+  color: #0077b6;
+}
+
+#add-show-form input {
+  display: block;
+  margin: 12px auto;
+  padding: 12px;
+  width: 320px;
+  font-size: 16px;
+  border: 2px solid #90e0ef;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#add-show-form input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 6px #90e0ef;
+}
+
+#add-show-form button {
+  background-color: #0077b6;
   color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#add-show-form button:hover {
+  background-color: #023e8a;
 }
 
 #card-container {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 2px solid #90e0ef;
+  box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
 }
 
 .card-content {
   padding: 20px;
-  font-family: "Verdana";
-  color: #777;
+  color: #023e8a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #0077b6;
+}
+
+.card-content ul {
+  padding-left: 18px;
+  list-style-type: disc;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555; 
 }
 
 .card img {
@@ -51,20 +145,113 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
+  background-color: #0077b6;
+  padding: 20px;
 }
 
 button {
-  text-align: center;
-  background-color: #666;
+  background-color: #0096c7;
   border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
-  border-radius: 10px;
   color: white;
-  font-size: 22px;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin: 0 10px;
   cursor: pointer;
-  margin: 5px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #023e8a;
+}
+
+.comedy {
+  border-left: 6px solid #00b4d8;
+}
+
+.drama {
+  border-left: 6px solid #ff6b9ac5;
+}
+
+.romance {
+  border-left: 6px solid #ff6b6b;
+}
+
+.thriller {
+  border-left: 6px solid #4b3633;
+}
+
+.action {
+  border-left: 6px solid #ff6b6b;
+}
+
+.adventure {  
+  border-left: 6px solid #ff6b6b;
+}
+
+.scifi {  
+  border-left: 6px solid #ff6bdc;  
+}
+
+.fantasy {  
+  border-left: 6px solid #6b9fff;  
+}
+
+.animation {  
+  border-left: 6px solid #ffae6b;  
+}
+
+.crime {  
+  border-left: 6px solid #d5ff6b;  
+}
+
+.documentary {  
+  border-left: 6px solid #ff6b6b;  
+}
+
+.history {  
+  border-left: 6px solid #6bfff3;  
+}
+
+.mystery {  
+  border-left: 6px solid #e66bff;  
+}
+
+/* Fade-in and slide-up animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card animation */
+.card {
+  animation: fadeSlideUp 0.5s ease-in-out;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  animation: pulse 0.4s ease-in-out;
+}
+
+#add-show-form input:focus,
+#search-input:focus {
+  animation: pulse 0.2s ease-in-out;
 }

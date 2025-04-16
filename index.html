@@ -10,8 +10,39 @@
   <body>
     <header class="main-header">
       <h1 class="title">LA TV Shows</h1>
+      <input 
+        type="text"
+        id="search-input"
+        placeholder="Search for a TV Show..."
+        oninput="filterShows()"
+        />
     </header>
+    <select id="genre-filter" onchange="filterByGenre()">
+      <option value="all">All Genres</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Drama">Drama</option>
+      <option value="Romance">Romance</option>
+      <option value="Thriller">Thriller</option>
+      <option value="Action">Action</option>
+      <option value="Adventure">Adventure</option>
+      <option value="Sci-Fi">Sci-Fi</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Animation">Animation</option>
+      <option value="Crime">Crime</option>
+      <option value="Documentary">Documentary</option>
+      <option value="History">History</option>
+      <option value="Mystery">Mystery</option>
+    </select>    
     <div id="card-container"></div>
+    <div id="add-show-form">
+      <h2>Add Your Own Show</h2>
+      <input type="text" id="new-title" placeholder="Title" />
+      <input type="text" id="new-image" placeholder="Image URL" />
+      <input type="text" id="new-genre" placeholder="Genre" />
+      <input type="number" id="new-year" placeholder="Year" />
+      <button onclick="addNewShow()">Add Show</button>
+    </div>
+    
     <div class="card" style="display: none">
       <div class="card-content">
         <h2>TV Show Title</h2>
@@ -26,6 +57,8 @@
     <div class="footer">
       <button onclick="quoteAlert();">Get A Quote!</button>
       <button onclick="removeLastCard();">Remove A Card!</button>
+      <button onclick="sortAZ();">Sort A → Z</button>
+
     </div>
   </body>
 </html>

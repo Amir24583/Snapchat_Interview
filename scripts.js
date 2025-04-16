@@ -31,58 +31,139 @@ const EAST_LOS_HIGH_POSTER_URL =
   "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
 // This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
+let shows = [
+  {
+    title: "Fresh Prince of Bel Air",
+    image: FRESH_PRINCE_URL,
+    genre: "Comedy",
+    year: 1990,
+    description: "A street-smart teen moves in with his wealthy relatives in Bel-Air."
+  },
+  {
+    title: "Curb Your Enthusiasm",
+    image: CURB_POSTER_URL,
+    genre: "Comedy",
+    year: 2000,
+    description: "Larry David navigates the petty annoyances of daily life."
+  },
+  {
+    title: "East Los High",
+    image: EAST_LOS_HIGH_POSTER_URL,
+    genre: "Drama",
+    year: 2013,
+    description: "A group of teens navigate life and love at a high school in East L.A."
+  }
 ];
+
+let isSortedAZ = false;
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
 
 // This function adds cards the page to display the data in the array
-function showCards() {
+function showCards(data = shows) {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
 
-  for (let i = 0; i < titles.length; i++) {
-    let title = titles[i];
+  for (let i = 0; i < data.length; i++) {
+    const { title, image, genre, year, description} = data[i];
 
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
-    let imageURL = "";
-    if (i == 0) {
-      imageURL = FRESH_PRINCE_URL;
-    } else if (i == 1) {
-      imageURL = CURB_POSTER_URL;
-    } else if (i == 2) {
-      imageURL = EAST_LOS_HIGH_POSTER_URL;
-    }
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, imageURL); // Edit title and image
-    cardContainer.appendChild(nextCard); // Add new card to the container
+    editCardContent(nextCard, title, image, genre, year); // Edit title and image
+
+    nextCard.style.animationDelay = `${i * 100}ms`;
+
+    cardContainer.appendChild(nextCard); 
   }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+function editCardContent(card, title, image, genre, year) {
   card.style.display = "block";
+  card.classList.add(genre.toLowerCase()); 
+
 
   const cardHeader = card.querySelector("h2");
-  cardHeader.textContent = newTitle;
+  cardHeader.textContent = title;
 
   const cardImage = card.querySelector("img");
-  cardImage.src = newImageURL;
-  cardImage.alt = newTitle + " Poster";
+  cardImage.src = image;
+  cardImage.alt = '${title} poster';
+
+  const ul = card.querySelector("ul");
+  ul.innerHTML = `
+  <li>Genre: ${genre}</li> 
+  <li>Year: ${year}</li>`;
 
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
   // select "Inspect", then click on the "Console" tab
-  console.log("new card:", newTitle, "- html: ", card);
+  console.log("new card:", title, "- html: ", card);
 }
 
+function filterShows() {
+  const  query = document.getElementById("search-input").value.toLowerCase();
+  const filtered = shows.filter(show => show.title.toLowerCase().includes(query));
+  showCards(filtered);
+}
+
+function sortAZ() {
+  isSortedAZ = !isSortedAZ;
+
+  let sortedShows = [...shows];
+
+  if (isSortedAZ) {
+    sortedShows.sort((a, b) => a.title.localeCompare(b.title));
+    document.querySelector(".footer button:nth-child(3)").textContent = "Sort Z → A";
+  } else {
+    sortedShows.sort((a, b) => b.title.localeCompare(a.title));
+    document.querySelector(".footer button:nth-child(3)").textContent = "Sort A → Z";
+  }
+
+  showCards(sortedShows);
+}
+
+function filterByGenre() {
+  const selectedGenre = document.getElementById("genre-filter").value;
+
+  if (selectedGenre === "all") {
+    showCards(); 
+  } else {
+    const filtered = shows.filter(show => show.genre === selectedGenre);
+    showCards(filtered);
+  }
+}
+
+
+function addNewShow() {
+  const title = document.getElementById("new-title").value;
+  const image = document.getElementById("new-image").value;
+  const genre = document.getElementById("new-genre").value;
+  const year = parseInt(document.getElementById("new-year").value());
+  const description = document.getElementById("new-description").value;
+
+  if (!title || !image || !genre || isNaN(year) || !description) {
+    alert("Please fill out all fields correctly.");
+    return;
+  }
+
+  shows.push({title, image, genre, year, description});
+
+
+  document.getElementById("new-title").value = "";
+  document.getElementById("new-image").value = "";
+  document.getElementById("new-genre").value = "";
+  document.getElementById("new-year").value = "";
+  document.getElementById("new-description").value = "";
+
+  showCards();
+}
+
+
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+document.addEventListener("DOMContentLoaded", () => {
+  showCards(); 
+});
 
 function quoteAlert() {
   console.log("Button Clicked!");
@@ -92,6 +173,6 @@ function quoteAlert() {
 }
 
 function removeLastCard() {
-  titles.pop(); // Remove last item in titles array
+  data.pop(); 
   showCards(); // Call showCards again to refresh
 }
