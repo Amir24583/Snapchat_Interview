@@ -1,0 +1,24 @@
+[
+    {
+      "title": "Fresh Prince of Bel Air",
+      "image": "https://example.com/fresh-prince.jpg",
+      "genre": "Comedy",
+      "year": 1990,
+      "description": "A street-smart teen moves in with his wealthy relatives in Bel-Air."
+    },
+    {
+      "title": "Curb Your Enthusiasm",
+      "image": "https://example.com/curb-your-enthusiasm.jpg",
+      "genre": "Comedy",
+      "year": 2000,
+      "description": "Larry David navigates the petty annoyances of daily life."
+    },
+    {
+      "title": "East Los High",
+      "image": "https://example.com/east-los-high.jpg",
+      "genre": "Drama",
+      "year": 2013,
+      "description": "A group of teens navigate life and love at a high school in East L.A."
+    }
+  ]
+  

@@ -31,33 +31,23 @@ const EAST_LOS_HIGH_POSTER_URL =
   "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
 // This is an array of strings (TV show titles)
-let shows = [
-  {
-    title: "Fresh Prince of Bel Air",
-    image: FRESH_PRINCE_URL,
-    genre: "Comedy",
-    year: 1990,
-    description: "A street-smart teen moves in with his wealthy relatives in Bel-Air."
-  },
-  {
-    title: "Curb Your Enthusiasm",
-    image: CURB_POSTER_URL,
-    genre: "Comedy",
-    year: 2000,
-    description: "Larry David navigates the petty annoyances of daily life."
-  },
-  {
-    title: "East Los High",
-    image: EAST_LOS_HIGH_POSTER_URL,
-    genre: "Drama",
-    year: 2013,
-    description: "A group of teens navigate life and love at a high school in East L.A."
-  }
-];
+let shows = [];
 
 let isSortedAZ = false;
 // Your final submission should have much more data than this, and
 // you should use more than just an array of strings to store it all.
+
+function loadData() {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => {
+      shows = data;
+      showCards();
+    })
+    .catch((error) => {
+      console.error("Failed to load JSON data:", error);
+    });
+}
 
 // This function adds cards the page to display the data in the array
 function showCards(data = shows) {
@@ -70,7 +60,7 @@ function showCards(data = shows) {
 
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, image, genre, year); // Edit title and image
+    editCardContent(nextCard, title, image, genre, year, description); // Edit title and image
 
     nextCard.style.animationDelay = `${i * 100}ms`;
 
@@ -78,7 +68,7 @@ function showCards(data = shows) {
   }
 }
 
-function editCardContent(card, title, image, genre, year) {
+function editCardContent(card, title, image, genre, year, description) {
   card.style.display = "block";
   card.classList.add(genre.toLowerCase()); 
 
@@ -88,12 +78,12 @@ function editCardContent(card, title, image, genre, year) {
 
   const cardImage = card.querySelector("img");
   cardImage.src = image;
-  cardImage.alt = '${title} poster';
+  cardImage.alt = '${title} Poster';
 
   const ul = card.querySelector("ul");
-  ul.innerHTML = `
-  <li>Genre: ${genre}</li> 
-  <li>Year: ${year}</li>`;
+  ul.innerHTML = `<li><strong>Genre:</strong> ${genre}</li>
+    <li><strong>Year:</strong> ${year}</li>
+    <li><strong>Description:</strong> ${description}</li>`;
 
   // You can use console.log to help you debug!
   // View the output by right clicking on your website,
@@ -162,7 +152,7 @@ function addNewShow() {
 
 // This calls the addCards() function when the page is first loaded
 document.addEventListener("DOMContentLoaded", () => {
-  showCards(); 
+  loadCards(); 
 });
 
 function quoteAlert() {
