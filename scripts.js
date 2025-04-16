@@ -60,7 +60,7 @@ function showCards(data = shows) {
 
 
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, image, genre, year, description); // Edit title and image
+    editCardContent(nextCard, title, image, genre, year, description); // Edits card content
 
     nextCard.style.animationDelay = `${i * 100}ms`;
 
