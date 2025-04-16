@@ -117,20 +117,31 @@ function filterByGenre() {
   }
 }
 
+function filterByType(type) {
+  if (type === "all") {
+    showCards();
+  } else {
+    const filtered = shows.filter(show => show.type === type);
+    showCards(filtered);
+  }
+}
+
+
 
 function addNewShow() {
   const title = document.getElementById("new-title").value;
   const image = document.getElementById("new-image").value;
   const genre = document.getElementById("new-genre").value;
-  const year = parseInt(document.getElementById("new-year").value());
+  const year = parseInt(document.getElementById("new-year").value);
   const description = document.getElementById("new-description").value;
+  const type = document.getElementById("new-type").value;
 
   if (!title || !image || !genre || isNaN(year) || !description) {
     alert("Please fill out all fields correctly.");
     return;
   }
 
-  shows.push({title, image, genre, year, description});
+  shows.push({title, image, genre, year, description, type});
 
 
   document.getElementById("new-title").value = "";
@@ -138,6 +149,7 @@ function addNewShow() {
   document.getElementById("new-genre").value = "";
   document.getElementById("new-year").value = "";
   document.getElementById("new-description").value = "";
+  document.getElementById("TV or Show?").value = "";
 
   showCards();
 }

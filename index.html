@@ -33,6 +33,11 @@
       <option value="History">History</option>
       <option value="Mystery">Mystery</option>
     </select>    
+    <div style="text-align:center; margin: 10px;">
+      <button onclick="filterByType('all')">All</button>
+      <button onclick="filterByType('TV Show')">TV Shows</button>
+      <button onclick="filterByType('Movie')">Movies</button>
+    </div>
     <div id="card-container"></div>
     <div id="add-show-form">
       <h2>Add Your Own Show</h2>
@@ -40,6 +45,8 @@
       <input type="text" id="new-image" placeholder="Image URL" />
       <input type="text" id="new-genre" placeholder="Genre" />
       <input type="number" id="new-year" placeholder="Year" />
+      <input type="text" id="new-description" placeholder="Description" />
+      <input type="text" id="new-type" placeholder="Type" />
       <button onclick="addNewShow()">Add Show</button>
     </div>
     

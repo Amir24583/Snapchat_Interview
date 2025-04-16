@@ -108,6 +108,28 @@ body {
   padding: 20px;
 }
 
+#type-filter-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#type-filter-container button {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  margin: 0 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#type-filter-container button:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}
+
 .card {
   width: 300px;
   border-radius: 10px;
